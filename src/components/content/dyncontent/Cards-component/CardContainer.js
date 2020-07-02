@@ -4,7 +4,6 @@ import SingleCard from './SingleCard';
 export default class CardContainer extends Component {
     render() {
         const { cards } = this.props;
-        console.log(cards);
         return (
             <div className="cardcontainer">
                 <div className="card-header">

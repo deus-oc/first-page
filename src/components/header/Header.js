@@ -1,6 +1,23 @@
 import React, {Component} from 'react'
 
 export default class Header extends Component {
+    
+    changeStatus(e){
+        const status = {
+            Login: false,
+            SignUp:false
+        }
+        if(e.target.value === "login"){
+            status.Login = true;
+            status.SignUp = false
+        }
+        else{
+            status.SignUp = true;
+            status.Login = false
+        } 
+        this.props.changeInStatus(status);            
+    }
+    
     render(){
         return (
             <div className="header-div">
@@ -17,9 +34,9 @@ export default class Header extends Component {
                 </div>
                 <div className = "logSign">
                     <ul>
-                        <li><button className="btn btn-outline-success my-2 my-sm-0">Login</button></li>
-                        <li><button className="btn btn-outline-success my-2 my-sm-0">Sign Up</button></li>
-                    </ul>
+                        <li><button className="btn btn-outline-success my-2 my-sm-0" value={"login"} onClick={e => this.changeStatus(e, "value") }>Login</button></li>
+                        <li><button className="btn btn-outline-success my-2 my-sm-0" value={"signup"} onClick={e => this.changeStatus(e, "value")}>Sign Up</button></li>
+                    </ul>   
                 </div>
             </div>
         )
