@@ -1,11 +1,8 @@
 .App-body {
-    background-image: url('/image/bg-1.png'), url('/image/bg-2.png');
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'lato', helvetica, arial;
+  line-height: 1.5;
+  background-color: #faf8f6;
+  font-family: 'EB Garamond', serif;
   }
-  
